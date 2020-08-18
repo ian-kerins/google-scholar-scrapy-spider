@@ -5,8 +5,7 @@ from urllib.parse import urlparse
 import json
 from datetime import datetime
 
-API_KEY = '23be5cf144f0a0fba106443c40808a03'
-
+API_KEY = '<YOUR_API_KEY>'
 
 def get_url(url):
     payload = {'api_key': API_KEY, 'url': url, 'country_code': 'us'}
