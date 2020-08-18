@@ -24,7 +24,7 @@ pip install scrapy
 Set the keywords you want to search in Google Scholar.
 
 ```
-queries = ['covid-19', 'income inequality']
+queries = ['airbnb', 'covid-19']
 ```
 
 Signup to [Scraper API](https://www.scraperapi.com/signup) and get your free API key that allows you to scrape 1,000 pages per month for free. Enter your API key into the API variable:
