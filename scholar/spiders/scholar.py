@@ -18,7 +18,7 @@ class ExampleSpider(scrapy.Spider):
     allowed_domains = ['api.scraperapi.com']
 
     def start_requests(self):
-        queries = ['covid-19']
+        queries = ['airbnb']
         for query in queries:
             url = 'https://scholar.google.com/scholar?' + urlencode({'hl': 'en', 'q': query})
             yield scrapy.Request(get_url(url), callback=self.parse, meta={'position': 0})
