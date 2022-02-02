@@ -14,6 +14,19 @@ BOT_NAME = 'scholar'
 SPIDER_MODULES = ['scholar.spiders']
 NEWSPIDER_MODULE = 'scholar.spiders'
 
+## Add Your ScrapeOps API key
+SCRAPEOPS_API_KEY = 'YOUR_API_KEY' ## get free API key at https://scrapeops.io/app/register
+
+## Add In The ScrapeOps Extension
+EXTENSIONS = {
+ 'scrapeops_scrapy.extension.ScrapeOpsMonitor': 500, 
+}
+
+## Update The Download Middlewares
+DOWNLOADER_MIDDLEWARES = { 
+'scrapeops_scrapy.middleware.retry.RetryMiddleware': 550, 
+'scrapy.downloadermiddlewares.retry.RetryMiddleware': None, 
+}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'scholar (+http://www.yourdomain.com)'
